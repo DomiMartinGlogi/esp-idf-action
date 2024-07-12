@@ -3,7 +3,6 @@
 # esp idf repository version
 esp_idf_tag="$1"
 esp_idf_repo="$2"
-install_targets="$3"
 
 # Installing prerequisites
 echo "## Install prerequisites"
@@ -32,4 +31,4 @@ cd ~/esp/esp-idf
 echo "## Install esp-idf tools"
 
 # Install required tools
-./install.sh "$install_targets"
+./install.sh all

@@ -60,7 +60,7 @@ runs:
         then 
           echo "Cache hit - skipping dependency installation"
         else
-          sh ${{ github.action_path }}/install.sh ${{ inputs.esp_idf_tag }} ${{ inputs.esp_idf_repo}} ${{ esp_idf_target }}
+          sh ${{ github.action_path }}/install.sh ${{ inputs.esp_idf_tag }} ${{ inputs.esp_idf_repo}}
         fi
       shell: bash
 
