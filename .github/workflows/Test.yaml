@@ -21,6 +21,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2 # Fügt den Checkout-Schritt hinzu
+
       - name: Install ESP-IDF and Build project
         uses: ./
         with: 
