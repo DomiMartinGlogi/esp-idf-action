@@ -34,7 +34,7 @@ inputs:
   build:
     description: 'Defines if the Project should be built'
     required: false
-    default: false
+    default: 'false'
 
 runs:
   using: "composite"
@@ -65,8 +65,7 @@ runs:
       shell: bash
 
     - run: |
-        if echo ${{ inputs.build }}
-        then
+        if [ "${{ inputs.build }}" = "true" ]; then
           source ~/esp/esp-idf/export.sh
           idf.py set-target ${{ inputs.esp_idf_target }}
           idf.py build
